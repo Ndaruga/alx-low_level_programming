@@ -1,8 +1,9 @@
 #include <stdio.h>
-/*
- *main - function is the entry point
- *main function takes no arguments hence voiid
- *Return : 0 status code (success)
+
+/**
+ * main - Entry point
+ * function uses the printf function
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
