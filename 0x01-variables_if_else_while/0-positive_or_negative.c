@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* 
- * Include standard i/o standard library and time
- * main - function is the entry point
- * Return: 0 for success
+/**
+ *main - Entry point
+ *Return: Always 1
  *
  */
-
 int main(void)
 {
 	int n;
@@ -25,7 +23,7 @@ int main(void)
         }
 	else if (n == 0)
 	{
-        	 printf("%d is zero\n", n);
+        	printf("%d is zero\n", n);
         }
 	return (0);
 }
