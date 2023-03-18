@@ -14,8 +14,15 @@ int main(void)
 	for (n = 0; n <= 9; n++)
 	{
 		putchar(48 + n);
-		putchar(44);
-		putchar(32);
+		if (n == 9)
+		{
+			break;
+		}
+		else
+		{
+			putchar(44);
+			putchar(32);
+		}
 	}
 	putchar('\n');
 
