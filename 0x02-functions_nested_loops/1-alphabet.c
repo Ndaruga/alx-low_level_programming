@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print alphabets from a - z using putchar
- * Return none
+ * print_alphabet - print all alphabets from a - z using putchar
+ * Return : none
  */
 
 
@@ -9,7 +9,7 @@ void print_alphabet(void)
 {
 	char i;
 
-	for(i = 'a'; i <= 'z'; i++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
 		_putchar(i);
 	}
