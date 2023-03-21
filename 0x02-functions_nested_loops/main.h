@@ -1,0 +1,3 @@
+
+
+int _putchar(int);
