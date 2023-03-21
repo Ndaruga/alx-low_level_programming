@@ -10,7 +10,7 @@ void print_alphabet_x10(void)
 	int iter;
 	char alpha;
 
-	for (iter = 0; iter <= 10; iter++)
+	for (iter = 0; iter < 10; iter++)
 	{
 		for (alpha = 'a'; alpha <= 'z'; alpha++)
 		{
