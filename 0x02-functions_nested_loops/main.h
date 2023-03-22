@@ -1,4 +1,5 @@
-
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 /**
  * _putchar - writes the character c to stdout
@@ -19,6 +20,10 @@ void print_alphabet(void);
 void print_alphabet_x10(void);
 
 
+/**
+ * _islower - check for lower case character
+ */
+int _islower(int c);
 
 
 
@@ -27,8 +32,7 @@ void print_alphabet_x10(void);
 
 
 
-
-
+#endif
 
 
 
