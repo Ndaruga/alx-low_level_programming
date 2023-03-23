@@ -2,7 +2,7 @@
 
 /**
  * _abs - function that computes the absolute value of an integer.
- * @int: parameter to be passed in function
+ * @no: parameter to be passed in function
  * Return: absolute No
  */
 
