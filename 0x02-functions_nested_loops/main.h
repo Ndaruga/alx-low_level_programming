@@ -51,6 +51,36 @@ int print_last_digit(int);
  */
 void jack_bauer(void);
 
+/**
+ * prints the 9 times table, starting with 0.
+ */
+void times_table(void);
+
+/**
+ * adds two integers and returns the result.
+ */
+int add(int, int);
+
+/**
+ * prints all natural numbers from n to 98, followed by a new line.
+ */
+void print_to_98(int n);
+
+
+/**
+ * function that prints the n times table, starting with 0.
+ */
+void print_times_table(int n);
+
+
+
+
+
+
+
+
+
+
 
 #endif
 
