@@ -4,7 +4,7 @@
 /**
  * print_array - print array of characters
  * @a: integer to be appended in array
- * n: number of items in array
+ * @n: number of items in array
  * Return: None
  */
 
