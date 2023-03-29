@@ -29,7 +29,9 @@ void puts2(char *str)
 	int start = 1;
 	char ch = *str;
 
-	_putchar(ch);
+	if (ch != '\0')
+		_putchar(ch);
+
 	/* increment ch */
 	ch = *++str;
 
