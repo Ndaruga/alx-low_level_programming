@@ -31,7 +31,7 @@ void puts_half(char *str)
 	int start;
 
 	if (len % 2 != 0)
-		start = ((len - 1) / 2) = 1;
+		start = ((len - 1) / 2) + 1;
 	else
 		start = len / 2;
 
