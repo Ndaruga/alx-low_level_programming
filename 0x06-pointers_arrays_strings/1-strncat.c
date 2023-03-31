@@ -18,24 +18,27 @@ int _strlen(char *s)
 	return (count);
 }
 
-
+/**
+ * _strncat -  concatenate two strings
+ * @dest: string 1
+ * @src: string 2
+ * @n: Number of bytes
+ * Return: destination string/ string 1
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {
-    int i = _strlen(dest);
-    int j = _strlen(src);
+        int i = _strlen(dest);
+        int j = _strlen(src);
 
+        for (j = 0; src[j] != '\0'; i++, j++)
+        {
+            if (j == n)
+                continue;
+            else
+                dest[i] = src[j];
+        }
+        dest[i] = '\0';
 
-
-    for (j = 0; src[j] != '\0'; i++, j++)
-    {
-        if (j == n)
-            continue;
-        else
-            dest[i] = src[j];
-    }
-    dest[i] = '\0';
-
-    return (dest);   
-
+        return (dest);
 }
