@@ -8,7 +8,9 @@ done
 
 # ************************************************#
 
-for obj_file in ./*.o
-do
-    ar rc liball.a $obj_file
-done
+# create a library archive file from all the object files
+ar rcs liball.a *.o
+
+# remove the object files
+rm -f *.o
+
