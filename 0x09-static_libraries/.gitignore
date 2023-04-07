@@ -40,3 +40,5 @@ _putchar.c
 _putchar.o
 
 main.c
+
+create_static_lib.sh

@@ -2,5 +2,8 @@
 
 for file in './*.c'
 do
-    gcc -c $file
+    # rm $file
+
+    obj_file="$(gcc -c $file)"
+    "{ar rc liball.a $obj_file}"
 done
