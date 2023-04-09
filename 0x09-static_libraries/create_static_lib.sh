@@ -1,9 +1,9 @@
 #!/bin/bash
 
-for file in *.c
-do
-    gcc -c $file
-    ar rc liball.a "${file%.c}.o"
-    rm "${file%.c}.o"
+# for file in *.c
+# do
+gcc -c *.c
+ar rc liball.a *.o
+rm *.o
 
-done
+# done
