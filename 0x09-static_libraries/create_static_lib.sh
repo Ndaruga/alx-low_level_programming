@@ -2,7 +2,7 @@
 
 # for file in *.c
 # do
-gcc -c *.c
+gcc gcc -Wall -pedantic -Werror -Wextra -std=gnu89 *.c
 ar rc liball.a *.o
 rm *.o
 
