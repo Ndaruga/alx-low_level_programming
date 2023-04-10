@@ -11,8 +11,8 @@
 int main(int argc, char **argv)
 {
 	int i;
-	argv = argv;
 
+	argv = argv;
 
 	for (i = 0; i < argc; i++)
 	{}
