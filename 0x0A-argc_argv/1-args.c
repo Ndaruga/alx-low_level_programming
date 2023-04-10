@@ -8,11 +8,9 @@
  * Return: 0
 */
 
-int main(int argc, char **argv)
+int main(int argc, char **argv __attribute__((unused)))
 {
 	int i;
-
-	argv = argv;
 
 	for (i = 0; i < argc; i++)
 	{}
