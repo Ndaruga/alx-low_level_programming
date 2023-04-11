@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	{
 		if (argv[i] == NULL)
 			continue;
-		printf("%s\n",argv[i]);
+		printf("%s\n", argv[i]);
 	}
 
 	return (0);
