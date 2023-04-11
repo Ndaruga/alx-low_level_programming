@@ -14,7 +14,9 @@ int main(int argc, char **argv)
 
 	for (i = 0; i <= argc; i++)
 	{
-		printf("%s\n", argv[i]);
+		if (argv[i] == NULL)
+			continue;
+		printf("%s\n",argv[i]);
 	}
 
 	return (0);
