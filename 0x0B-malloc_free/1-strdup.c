@@ -15,6 +15,9 @@ char *_strdup(char *str)
 	char *mem;
 	int len = strlen(str), i = 0;
 
+	if (str == NULL) /* Check if string is null*/
+		return (NULL);
+	
 	mem = malloc(sizeof(str) * i);
 	if (mem == NULL)
 		return (NULL);
