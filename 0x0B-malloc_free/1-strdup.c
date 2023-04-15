@@ -12,19 +12,33 @@
 
 char *_strdup(char *str)
 {
-	char *mem;
-	int len = strlen(str), i = 0;
+	char *dup_str;
+	int i = 0;
+	int len = 0;
 
-	if (str == NULL) /* Check if string is null*/
-		return (NULL);
-	
-	mem = malloc(sizeof(str) * i);
-	if (mem == NULL)
-		return (NULL);
-	while (i < len)
+	if (str == NULL)
 	{
-		mem[i] = *str++;
-		i++;
+		printf("String is null\n");
+		return (NULL);
 	}
-	return (mem);
+	/*---------Check length of the string without null terinator------*/
+	while (*str++)
+	{
+		len++;
+	}
+	len++;
+	dup_str = malloc(sizeof(str) * len);
+	if (dup_str == NULL )
+	{
+		printf("Malloc returned NUll\n");
+		return (NULL);
+	}
+	for (i = 0; i < len; i++, *str++)
+	{
+		dup_str[i] = *str;
+		printf("%s\n", dup_str);
+	}
+	printf("Returning duplicate\n");
+	return (dup_str);
+	
 }
