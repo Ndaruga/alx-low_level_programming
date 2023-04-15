@@ -1,5 +1,6 @@
 #include "main.h"
 #include "stdlib.h"
+#include "stdio.h"
 
 /**
  * str_concat - concatenate two strings
@@ -27,9 +28,7 @@ char *str_concat(char *s1, char *s2)
     {
         len_s1++;
     }
-
     s1 = temp;
-
     
     /**-------Get length of s2--------*/
     temp = s2;
@@ -39,8 +38,8 @@ char *str_concat(char *s1, char *s2)
         len_s2++;
     }
     len_s2++;
-
     s2 = temp;
+
 
     concatd_str = malloc(sizeof(char) * (len_s1 + len_s2));
     if (concatd_str == NULL)
@@ -52,9 +51,7 @@ char *str_concat(char *s1, char *s2)
         concatd_str[i] = *s1;
     }
 
-    return (concatd_str);
-
-    for (i = 0; i < len_s2; i++, *s2++)
+     for (i = len_s1; i < (len_s1 + len_s2); i++, *s2++)
     {
         concatd_str[i] = *s2;
     }
