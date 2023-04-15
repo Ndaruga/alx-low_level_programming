@@ -17,7 +17,9 @@ char *str_concat(char *s1, char *s2)
 
     char *temp = s1; /*---- set a duplicate value of s1 to temp*/
 
-    if (s1 == NULL || s2 == NULL)
+    if (s1 == NULL)
+        return ("");
+    if (s2 == NULL)
         return ("");
     
     /*-----Get the length of s1-----*/
@@ -25,7 +27,6 @@ char *str_concat(char *s1, char *s2)
     {
         len_s1++;
     }
-    len_s1++;
 
     s1 = temp;
 
@@ -50,7 +51,9 @@ char *str_concat(char *s1, char *s2)
     {
         concatd_str[i] = *s1;
     }
-    
+
+    return (concatd_str);
+
     for (i = 0; i < len_s2; i++, *s2++)
     {
         concatd_str[i] = *s2;
