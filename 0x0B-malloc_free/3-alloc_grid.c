@@ -23,7 +23,6 @@ int **alloc_grid(int height, int width)
 	two_dim = (int **) malloc(sizeof(int *) * width);
 	if (two_dim == NULL)
 	{
-		free(two_dim);
 		return (NULL);
 	}
 	/*--------Nested for loops -------*/
@@ -39,7 +38,6 @@ int **alloc_grid(int height, int width)
 			/* free all previous memory allocations */
 			for (j = 0; j < i; j++)
 				free(two_dim[j]);
-			free(two_dim);
 			return (NULL);
 			}
 		}
@@ -49,6 +47,5 @@ int **alloc_grid(int height, int width)
 		}
 		free(two_dim[i]);
 	}
-	free(two_dim);
 	return (two_dim);
 }
