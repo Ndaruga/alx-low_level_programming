@@ -21,7 +21,7 @@ int **alloc_grid(int height, int width)
 
     /*-----Allocate memory of size int* to width. This way we allocate a memory 
             block for a 1D array of pointers.-----*/
-    two_dim = malloc(sizeof(int*) * width);
+    two_dim = (int**) malloc(sizeof(int*) * width);
     if (two_dim == NULL)
         return (NULL);
     
@@ -30,7 +30,7 @@ int **alloc_grid(int height, int width)
     {
         /*--------For each Pointer in the 1D array, allocate other array
                 of pointers of size int thereby creating a 2D array----------*/
-        two_dim[i] = malloc(sizeof(int) * height);
+        two_dim[i] = (int*) malloc(sizeof(int) * height);
         if (two_dim[i] == NULL)
             return NULL;
         for (j = 0; j < height; j++)
@@ -41,5 +41,4 @@ int **alloc_grid(int height, int width)
     }
     free(two_dim);
     return (two_dim);
-
 }
