@@ -30,7 +30,7 @@ int **alloc_grid(int height, int width)
     {
         /*--------For each Pointer in the 1D array, allocate other array
                 of pointers of size int thereby creating a 2D array----------*/
-        two_dim[i] = (int *) malloc(sizeof(int) * height);
+        two_dim[i] = malloc(sizeof(int) * height);
         if (two_dim[i] == NULL)
             return NULL;
         for (j = 0; j < height; j++)
