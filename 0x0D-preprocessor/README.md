@@ -9,6 +9,7 @@ The compilation is divided into 4 steps
 <li>Assembly</li>
 <li>Linking</li>
 
+![image](https://user-images.githubusercontent.com/68260816/233673797-d3e91d10-cdff-4412-80ba-a957edde87cb.png)
 
 
 ### Pre-processor
