@@ -1,5 +1,7 @@
 # C - Preprocessor
 
+## The compilation process
+
 Compilation is the process of converting a souce code to object code. <br>
 The compilation is divided into 4 steps
 <li>Pre-processing</li>
@@ -28,4 +30,5 @@ This is the process of including the library files into the program.<br>
 Mainly, all programs written in c use library functions. These library functions are precompiled and the object code stored in a `.lib` or `.a` extension.
 The output of the linker is the `.exe` file.
 
-
+## Macros
+The other major use of the preprocessor is to `define macros`.<br>
