@@ -11,9 +11,10 @@
 
 void free_grid(int **grid, int height)
 {
-    int i;
+	int i;
 
-    for (i=  0; i<height; i++)
-        free(grid);
-    free(grid);
+	printf("size of grid %lu", sizeof(grid));
+	for (i =  0; i < height; i++)
+		free(grid[i]);
+	free(grid);
 }
