@@ -13,7 +13,7 @@ void *malloc_checked(unsigned int b)
 	int *alloc;
 
 	/**
-	 * allocate memory and exit eith status 98 if it fails
+	 * allocate memory to b and exit eith status 98 if it fails
 	*/
 	alloc = malloc(b);
 	if (alloc == NULL)
