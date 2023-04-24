@@ -13,7 +13,7 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
-	if (grid == NULL)
+	if ((grid == NULL) || (height <= 0))
 		free(grid);
 	printf("size of grid %lu", sizeof(grid));
 	for (i =  0; i < height; i++)
