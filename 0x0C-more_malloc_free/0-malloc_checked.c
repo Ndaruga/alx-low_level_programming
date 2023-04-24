@@ -10,12 +10,12 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *alloc;
+	int *alloc;
 
 	/**
 	 * allocate memory and exit eith status 98 if it fails
 	*/
-	alloc = malloc(sizeof(int) * b);
+	alloc = malloc(sizeof(b));
 	if (alloc == NULL)
 	{
 		exit(98);
