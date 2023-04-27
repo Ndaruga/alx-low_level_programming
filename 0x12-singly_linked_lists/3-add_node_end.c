@@ -24,17 +24,17 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *nw_node, *temp; /* create new node */
 
-	if (str == NULL) /* validate input */
+	if (str == NULL)
 		return (NULL);
-	if (strdup(str) == NULL) /* check if malloc errored */
+	if (strdup(str) == NULL)
 		return (NULL);
 
 	nw_node = malloc(sizeof(list_t)); /* malloc for new node */
 	if (nw_node == NULL)
 		return (NULL);
 
-	nw_node->str = strdup(str); /* set node values */
-	nw_node->len = _strstr_len(str);
+	nw_node->str = strdup(str);
+	nw_node->len = _strlen(str);
 	nw_node->next = NULL;
 
 	if (*head == NULL) /* if no list nodes, set nw_node to beginning */
