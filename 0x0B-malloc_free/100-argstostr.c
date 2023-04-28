@@ -1,89 +1,63 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
-#include "stdlib.h"
-#include "stdio.h"
 
 /**
- * str_concat - concatenate two strings
- * @s1: string to be concatenated to
- * @s2: string to concatenate with
- * Return: Return ptr to newly allocaated space
-*/
+ * _strlen - returns length of a string
+ * @s: string
+ * Return: length
+ */
 
-char *str_concat(char *s1, char *s2)
+int _strlen(char *s)
 {
-	char *concatd_str;
-	int len_s1 = 0;
-	int len_s2 = 0;
-	int i = 0;
-	char *temp = s1; /*---- set a duplicate value of s1 to temp*/
+	int len = 0;
 
-	if (s2 == NULL)
-		return (" ");
-	else if (s1 == NULL)
-		return (" ");
-	/*-----Get the length of s1-----*/
-	while (*s1++)
-	{
-		len_s1++;
-	}
-	s1 = temp;
+	while (*s != '\0')
+		len++, s++;
 
-	/**-------Get length of s2--------*/
-	temp = s2;
-
-	while (*s2++)
-	{
-		len_s2++;
-	}
-	len_s2++;
-	s2 = temp;
-	concatd_str = malloc(sizeof(char) * (len_s1 + len_s2));
-	if (concatd_str == NULL)
-		return (NULL);
-
-	/*------Add s1 to concatd_str-------*/
-	for (i = 0; i < len_s1; i++, *s1++)
-	{
-		concatd_str[i] = *s1;
-	}
-	for (i = len_s1; i < (len_s1 + len_s2); i++, *s2++)
-	{
-		concatd_str[i] = *s2;
-	}
-	return (concatd_str);
+	return (len);
 }
 
 /**
- * argstostr - concat all args 
- * @ac: number of args
- * @av: args
- * Return: Pointer to new string
-*/
+ * argstostr - concatenates all arguments 
+ * @ac: argc
+ * @av: arguments
+ * Return: pointer to array
+ */
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, len;
-	char *sc;
-	char *new_string;
+	char *s;
+	int len = 0, i, j, k = 0;
 
-	if ((ac == 0) || av == NULL)
+	if (ac == 0 || av == NULL) /* validate input */
 		return (NULL);
 
+	/* find length to malloc */
 	for (i = 0; i < ac; i++)
 	{
-		len = 0;
-		while (*av++)
-			len++;
-		len++;
-		for (j = 0; j < i; j++, *av++)
-		{
-			new_string = (char *) malloc(sizeof(char) * len);
-			if (new_string == NULL)
-				return (NULL);
-			sc = str_concat(*av, "\n");
-			new_string = sc;
-		}
+		len += _strlen(av[i]);
+	}
+	len += (ac + 1); /* add space for newlines and null terminator */
+
+	/* allocate memory and free if error */
+	s = malloc(len * sizeof(char));
+
+	if (s == NULL)
+	{
+		free(s);
+		return (NULL);
 	}
 
-	return (new_string);
+	/* insert each arg into *str */
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; j < _strlen(av[i]); j++)
+		{
+			s[k++] = av[i][j];
+		}
+		s[k++] = '\n';
+	}
+
+	return (s);
 }
