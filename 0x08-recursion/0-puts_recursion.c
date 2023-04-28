@@ -11,9 +11,6 @@ void _puts_recursion(char *s)
 	/* check for null pointer as base condition*/
 	if (*s == '\0')
 		_putchar('\n');
-	else
-	{
-		_putchar(*s);
-		_puts_recursion(s + 1);
-	}
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
 }
