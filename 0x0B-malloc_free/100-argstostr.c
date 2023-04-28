@@ -19,7 +19,7 @@ int _strlen(char *s)
 }
 
 /**
- * argstostr - concatenates all arguments 
+ * argstostr - concatenates all arguments
  * @ac: argc
  * @av: arguments
  * Return: pointer to array
